@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Readonly Atribut</title>
+	</head>
+	<body>
+		<form id="moja-forma">
+			<label for="username">Korisničko ime:</label>
+			<input
+				type="text"
+				id="username"
+				name="username"
+				value="johndoe"
+				readonly
+			/>
+
+			<label for="message">Poruka:</label>
+			<textarea id="message" name="message" readonly>
+                Ovo je nepromjenjiva poruka.</textarea
+			>
+
+			<button type="submit">Pošalji</button>
+		</form>
+
+		<script>
+			document
+				.getElementById("moja-forma")
+				.addEventListener("submit", function (event) {
+					event.preventDefault(); // Spriječi defaultno ponašanje submitanja forme
+
+					const formData = new FormData(this);
+					const formObject = {};
+
+					formData.forEach((value, key) => {
+						formObject[key] = value;
+					});
+
+					const formObjectString = JSON.stringify(
+						formObject,
+						null,
+						2
+					);
+					alert(formObjectString);
+				});
+		</script>
+	</body>
+</html>

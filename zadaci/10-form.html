@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Osnovna Forma</title>
+	</head>
+	<body>
+		<div>
+			<h3>Podnošenje forme (POST)</h3>
+			<form action="/submit-form" method="post">
+				<label for="name">Ime:</label>
+				<input
+					type="text"
+					id="name"
+					name="name"
+					placeholder="Vaše ime"
+					required
+				/>
+
+				<label for="email">E-mail:</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="Vaš e-mail"
+					required
+				/>
+
+				<label for="message">Poruka:</label>
+				<textarea
+					id="message"
+					name="message"
+					placeholder="Vaša poruka"
+					required
+				></textarea>
+
+				<button type="submit">Pošalji</button>
+			</form>
+		</div>
+
+		<div>
+			<h3>Podnošenje forme (GET)</h3>
+			<form action="https://www.google.com/search" method="get">
+				<input
+					autocomplete="off"
+					autofocus
+					name="q"
+					placeholder="Pretraži web"
+					type="search"
+				/>
+				<button>Google Search</button>
+			</form>
+		</div>
+	</body>
+</html>

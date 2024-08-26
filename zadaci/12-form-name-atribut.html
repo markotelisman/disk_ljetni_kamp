@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Name atribut - kako popraviti BUG u formi</title>
+	</head>
+	<body>
+	<h1>Popravite bug u formi<h1>
+		<form action="/submit" method="post" id="moja-forma">
+			<label for="name">Vaše ime:</label>
+			<input 
+				type="text" 
+				id="name" 
+				name="name"  
+				placeholder="John"
+			/>
+
+			<label for="email">E-mail:</label>
+			<input
+				type="email"
+				id="email"
+				name="email"
+				placeholder="Vaš e-mail"
+			/>
+
+			<label for="message">Vaša poruka:</label>
+			<input
+				type="text"
+				id="message"
+				value=""
+				placeholder="upišite poruku ovdje"
+			/>
+
+			<button type="submit">Pošalji</button>
+		</form>
+
+		<script>
+			document
+				.getElementById("moja-forma")
+				.addEventListener("submit", function (event) {
+					event.preventDefault(); // Spriječi defaultno ponašanje submitanja forme
+
+					const formData = new FormData(this);
+					const formObject = {};
+
+					formData.forEach((value, key) => {
+						formObject[key] = value;
+					});
+
+					const formObjectString = JSON.stringify(
+						formObject,
+						null,
+						2
+					);
+					alert(formObjectString);
+				});
+		</script>
+	</body>
+</html>

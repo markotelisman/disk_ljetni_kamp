@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+		<title>Button Forma s akcijama</title>
+	</head>
+	<body>
+		<div>
+			<h3>Forma s različitim akcijama</h3>
+			<p>Odobravanje zahtjeva za godišnji odmor</p>
+			<form id="moja-forma" method="post">
+				<textarea
+					name="komentar"
+					rows="5"
+					cols="50"
+					placeholder="Unesite obrazloženje ovdje..."
+				></textarea>
+
+				<!-- Dugme za Odobri -->
+				<button
+					type="submit"
+					style="background-color: green; color: white"
+					value="approve"
+				>
+					Odobri
+				</button>
+
+				<!-- Dugme za Odbij -->
+				<button
+					type="submit"
+					style="background-color: red; color: white"
+					value="reject"
+				>
+					Odbij
+				</button>
+			</form>
+		</div>
+
+		<script>
+			document
+				.getElementById("moja-forma")
+				.addEventListener("submit", function (event) {
+					event.preventDefault(); // Spriječi defaultno ponašanje submitanja forme
+
+					const formData = new FormData(this);
+					const formObject = {};
+
+					formData.forEach((value, key) => {
+						formObject[key] = value;
+					});
+
+					const formObjectString = JSON.stringify(
+						formObject,
+						null,
+						2
+					);
+
+					const button = event.submitter;
+
+					const buttonValue = button.value;
+
+					if (buttonValue === "approve") {
+						alert(
+							`Zahtjev je odobren, sretan put! \nKomentar: ${formObjectString}`
+						);
+					} else if (buttonValue === "reject") {
+						alert(
+							`Ove godine ništa od ljetovanja! \nKomentar: ${formObjectString}`
+						);
+					}
+				});
+		</script>
+	</body>
+</html>

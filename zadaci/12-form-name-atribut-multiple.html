@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+		<title>Name atribut - kako popraviti BUG u formi</title>
+	</head>
+	<body>
+		<form id="moja-forma" action="/submit" method="post">
+			<label>
+				<input type="radio" name="gender" value="male" /> Muški
+			</label>
+			<label>
+				<input type="radio" name="gender" value="female" /> Ženski
+			</label>
+			<label>
+				<input type="radio" name="gender" value="other" /> Ostalo
+			</label>
+
+			<button type="submit">Pošalji</button>
+		</form>
+
+		<script>
+			document
+				.getElementById("moja-forma")
+				.addEventListener("submit", function (event) {
+					event.preventDefault(); // Spriječi defaultno ponašanje submitanja forme
+
+					const formData = new FormData(this);
+					const formObject = {};
+
+					formData.forEach((value, key) => {
+						formObject[key] = value;
+					});
+
+					const formObjectString = JSON.stringify(
+						formObject,
+						null,
+						2
+					);
+					alert(formObjectString);
+				});
+		</script>
+	</body>
+</html>

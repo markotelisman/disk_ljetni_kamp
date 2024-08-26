@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+		<title>Portfolio - Ivan</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav>
+			<div>
+				<a href="#">Ivan</a>
+				<button type="button">
+					<span>Navigacija toggle</span>
+				</button>
+				<div id="navbarNav">
+					<ul>
+						<li>
+							<a href="#omeni">O meni</a>
+						</li>
+						<li>
+							<a href="#vjestine">Vještine</a>
+						</li>
+						<li>
+							<a href="#projekti">Projekti</a>
+						</li>
+						<li>
+							<a href="#kontakt">Kontakt</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- First Container -->
+		<section id="omeni">
+			<div>
+				<h3>O meni</h3>
+				<img
+					src="../moja-profilna.jpg"
+					style="display: inline"
+					alt="Bird"
+					width="350"
+					height="350"
+				/>
+				<h3>Ivan Ivić</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna
+					aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</p>
+			</div>
+		</section>
+
+		<!-- Second Container -->
+		<section id="vjestine">
+			<div>
+				<h3>Vještine</h3>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna
+					aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+					ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</p>
+
+				<div>
+					<h6>Tehnologije koje koristim</h6>
+					<div>
+						<div>HTML</div>
+					</div>
+					<div>
+						<div>CSS</div>
+					</div>
+					<div>
+						<div>JavaScript</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Third Container (Grid) -->
+		<section id="projekti">
+			<div>
+				<h3>Moji projekti</h3>
+
+				<div>
+					<div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua.
+						</p>
+						<!-- CSS - ukloniti width i height -->
+						<img src="../empori-app.png" alt="Image" width="350" height="350" />
+					</div>
+					<div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua.
+						</p>
+						<!-- CSS - ukloniti width i height -->
+						<img src="../empori-landing.jpg" alt="Image" width="350" height="350" />
+					</div>
+					<div>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua.
+						</p>
+						<!-- CSS - ukloniti width i height -->
+						<img src="../pwa-todo.webp" alt="Image" width="350" height="350" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Kontakt sekcija -->
+		<section id="kontakt">
+			<div>
+				<h3>Kontakt</h3>
+				<!-- Kontakt forma s akcijom slanja emaila na ivan.ivic@example.com -->
+				<form
+					action="mailto:ivan.ivic@example.com"
+					method="post"
+					enctype="text/plain"
+				>
+					<div>
+						<label for="ime">Ime:</label>
+						<input
+							type="text"
+							id="ime"
+							placeholder="Unesite ime"
+							name="ime"
+						/>
+					</div>
+					<div>
+						<label for="email">Email:</label>
+						<input
+							type="email"
+							id="email"
+							placeholder="Unesite email"
+							name="email"
+						/>
+					</div>
+					<div>
+						<label for="poruka">Poruka:</label>
+						<textarea
+							rows="5"
+							id="poruka"
+							name="poruka"
+							placeholder="Unesite poruku"
+						></textarea>
+					</div>
+					<button type="submit">Pošalji</button>
+				</form>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<p>&copy; 2024 Ivan Ivić. Sva prava pridržana.</p>
+		</footer>
+	</body>
+</html>
