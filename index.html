@@ -14,6 +14,7 @@
 			href="https://fonts.googleapis.com/css?family=Montserrat"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="style.css">
 		<style>
 			body {
 				font: 20px Montserrat, sans-serif;
@@ -231,7 +232,7 @@
 				<h3 class="margin">Kontakt</h3>
 				<!-- Kontakt forma s akcijom slanja emaila na ivan.ivic@example.com -->
 				<form
-					action="mailto:ivan.ivic@example.com"
+					action="window.location.href = 'send_email.html'"
 					method="post"
 					enctype="text/plain"
 				>
@@ -265,7 +266,7 @@
 							placeholder="Unesite poruku"
 						></textarea>
 					</div>
-					<button type="submit" class="btn btn-primary">
+					<button type="submit" class="btn btn-primary" onclick="validateForm(event)">
 						Pošalji
 					</button>
 				</form>
@@ -281,5 +282,6 @@
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"
 		></script>
+		<script src="index.js"></script>
 	</body>
 </html>
