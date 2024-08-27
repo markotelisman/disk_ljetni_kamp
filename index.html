@@ -231,40 +231,18 @@
 			<div class="container-fluid bg-2 text-center">
 				<h3 class="margin">Kontakt</h3>
 				<!-- Kontakt forma s akcijom slanja emaila na ivan.ivic@example.com -->
-				<form
-					action="window.location.href = 'send_email.html'"
-					method="post"
-					enctype="text/plain"
-				>
+				<form action="send_email.html" method="get" enctype="text/plain" >
 					<div class="mb-3">
 						<label for="ime" class="form-label">Ime:</label>
-						<input
-							type="text"
-							class="form-control"
-							id="ime"
-							placeholder="Unesite ime"
-							name="ime"
-						/>
+						<input type="text" class="form-control" id="ime" placeholder="Unesite ime" name="ime"/>
 					</div>
 					<div class="mb-3">
 						<label for="email" class="form-label">Email:</label>
-						<input
-							type="email"
-							class="form-control"
-							id="email"
-							placeholder="Unesite email"
-							name="email"
-						/>
+						<input type="email" class="form-control" id="email" placeholder="Unesite email" name="email" />
 					</div>
 					<div class="mb-3">
 						<label for="poruka" class="form-label">Poruka:</label>
-						<textarea
-							class="form-control"
-							rows="5"
-							id="poruka"
-							name="poruka"
-							placeholder="Unesite poruku"
-						></textarea>
+						<textarea class="form-control" rows="5" id="poruka" name="poruka" placeholder="Unesite poruku" ></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary" onclick="validateForm(event)">
 						Pošalji
