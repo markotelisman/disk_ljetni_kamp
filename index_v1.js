@@ -138,3 +138,35 @@ function validateForm(event)
     }
     //console.log(event)
 }
+
+function dohvatiVic(){
+    let oVic = "";
+    oVic = document.getElementById("vic_element");
+    fetch('https://v2.jokeapi.dev/joke/Any')
+        .then(response => response.json())
+        .then(data => {
+        let sSingleJoke = "<br>" + data.joke;
+        let sTwoPart = "<br>" + data.setup + "<br><br>"+data.delivery;
+        if(data.type === "twopart")
+        {
+            oVic.innerHTML = sTwoPart;
+        }
+        else  
+        {
+            oVic.innerHTML =sSingleJoke;
+        }
+    });
+}
+dohvatiVic();
+function dohvatiMisaoDana(){
+    let oMisaoDana = "";
+    oMisaoDana = document.getElementById("misao_dana");
+    fetch('https://api.adviceslip.com/advice')
+        .then(response => response.json())
+        .then(data => {
+            const advice = data.slip.advice;
+            console.log(`Advice: ${advice}`);
+            oMisaoDana.innerHTML= "<br>"+advice;
+    }); 
+}
+dohvatiMisaoDana();
