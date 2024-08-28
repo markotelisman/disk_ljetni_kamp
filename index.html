@@ -60,9 +60,6 @@
 				color: #1abc9c !important;
 			}
 		</style>
-		<!--script>
-			alert("Hello World!");
-		</script-->
 	</head>
 	<body>
 		<!-- Navbar -->
@@ -234,7 +231,10 @@
 			<div class="container-fluid bg-2 text-center">
 				<h3 class="margin">Kontakt</h3>
 				<!-- Kontakt forma s akcijom slanja emaila na Marko.ivic@example.com -->
-				<form action="send_email.html" method="get" enctype="text/plain" >
+				<form 
+					action="send_email.html" 
+					method="get" 
+					enctype="text/plain" >
 					<div class="mb-3">
 						<label for="ime" class="form-label">Ime:</label>
 						<input type="text" class="form-control" id="ime" placeholder="Unesite ime" name="ime"/>
@@ -247,10 +247,23 @@
 						<label for="poruka" class="form-label">Poruka:</label>
 						<textarea class="form-control" rows="5" id="poruka" name="poruka" placeholder="Unesite poruku" ></textarea>
 					</div>
-					<button type="submit" class="btn btn-primary" onclick="validateForm(event)">
+					<button 
+						type="submit" 
+						class="btn btn-primary" 
+						onclick="validateForm(event)">
 						Pošalji
 					</button>
 				</form>
+			</div>
+		</section>
+
+		<section id="vic">
+			<div class="container-fluid bg-1 text-center">
+				<h3 class="margin">Vic dana</h3>				 
+ 				<p id="vic_element">
+					
+				</p>
+				<button class="btn btn-primary" onclick="dohvatiVic();">Molim novi vic!</button>
 			</div>
 		</section>
 
@@ -263,7 +276,7 @@
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"
 		></script>
-		<!--script src="index_v1.js"></script-->
+		<script src="index.js"></script>
 	</body>
 </html>
 

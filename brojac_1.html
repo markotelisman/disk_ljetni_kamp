@@ -1,0 +1,28 @@
+<html lang="cro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brojač</title>
+    <script>
+        let nBrojac = 0;
+        /*Sve sto je unutar ovih znakova je komentar*/
+        function broj(){
+            nBrojac++;
+            //alert("Vrijednost brojača je: "+nBrojac);
+            //console.log("Vrijednost brojača je: "+nBrojac);
+            document.querySelector("h1").innerHTML = nBrojac;
+            
+            if(nBrojac % 10 === 0){
+                alert(`Brojač je sada na ${nBrojac}`);
+                //alert("Brojač je sada na "+nBrojac );
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1>0</h1>
+    <button onclick="broj()">Pritisni me!</button>
+    
+</body>
+</html>
