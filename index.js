@@ -12,7 +12,7 @@ oImg.forEach(
             element.style.transform = "scale(1.2)";
             element.style.transition = "transform 0.3 ease";
             element.style.cursor = "pointer";
-            //element.classList.add("nav_item_test");
+            element.classList.add("image-tilt");
         });
         element.addEventListener("mouseleave", function(){
             element.style.transform = "scale(1)";
@@ -113,3 +113,25 @@ function dohvatiVic(){
     });
 }
 dohvatiVic();
+
+function dohvatiMacu(){
+    let sImgElement = "";
+    let sUrl = "";
+    let sAltText = "";
+    let oMacaDana = "";
+    oMacaDana = document.getElementById("maca_element");
+     
+
+    for (brojac = 1; brojac <5; brojac++)
+    {
+        fetch('https://api.thecatapi.com/v1/images/search')
+        .then(response => response.json())
+        .then(data => {
+            sUrl = data[0].url;
+            sImgElement += "<img class='img-responsive img-circle margin image-tilt image-grayscale bounce pulse fade-in-out wobble' src='"+sUrl+"' style='border-radius:15%; width:300px;height:auto; cursor:pointer;'   />";
+            oMacaDana.innerHTML = sImgElement;
+      });
+    }
+    
+}
+dohvatiMacu();

@@ -170,3 +170,19 @@ function dohvatiMisaoDana(){
     }); 
 }
 dohvatiMisaoDana();
+
+function dohvatiMacu(){
+    let sImgElement = "";
+    let sUrl = "";
+    let sAltText = "";
+    let oMacaDana = "";
+    oMacaDana = document.getElementById("maca_element");
+    fetch('https://api.thecatapi.com/v1/images/search')
+    .then(response => response.json())
+    .then(data => {
+        sUrl = data[0].url;
+        sAltText ="test";
+        sImgElement = "<img class='img-responsive img-circle margin' src='"+sUrl+"' alt='"+sAltText+"'/>";
+
+ });
+}
