@@ -1,7 +1,3 @@
-.nav_item_test{
-    background-color: yellow;
-}
-
 .image-tilt {
     ransform: perspective(1000px);
     transition: transform 0.3s ease;
