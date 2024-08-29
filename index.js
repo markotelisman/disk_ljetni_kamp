@@ -127,23 +127,7 @@ function dohvatiMisaoDana(){
     }); 
 }
 dohvatiMisaoDana();
-
-function prevediMisaoDana (){
-    const res = fetch("https://libretranslate.com/translate", {
-        method: "POST",
-        body: JSON.stringify({
-            q: "",
-            source: "auto",
-            target: "cro",
-            format: "text",
-            alternatives: 3,
-            api_key: ""
-        }),
-        headers: { "Content-Type": "application/json" }
-    });
-    
-    console.log(res.json());
-}
+ 
 function dohvatiMacu(){
     let sImgElement = "";
     let sUrl = "";
@@ -168,24 +152,3 @@ function dohvatiMacu(){
 }
 dohvatiMacu();
 
-/*
-function napraviGalerijuMaca(){
-    let sGalleryImgElement = "";
-    let sUrl = "";
-    let sAltText = "";
-    let oMacaDana = "";
-    oMacaDanaGalerija = document.getElementById("galerija");
-    for (brojac = 0; brojac < 4; brojac++)
-    {
-        fetch('https://api.thecatapi.com/v1/images/search')
-        .then(response => response.json())
-        .then(data => {
-            sUrl = data[0].url;
-            //CSS Klase: image-tilt image-grayscale bounce pulse fade-in-out wobble flip shrink-grow heartbeat glow
-            let sKlase = "";
-            sGalleryImgElement += "<a data-fslightbox='gallery' href='"+sUrl+"'> <img src='"+sUrl+"' class='img-responsive margin "+sKlase+"' style='width: 20%' alt='Image'/></a>";
-            oMacaDanaGalerija.innerHTML = sGalleryImgElement;
-      });
-    }
-}
-napraviGalerijuMaca();*/
