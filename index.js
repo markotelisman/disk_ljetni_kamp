@@ -134,8 +134,6 @@ function dohvatiMacu(){
     let sAltText = "";
     let oMacaDana = "";
     oMacaDana = document.getElementById("maca_element");
-     
-
     for (brojac = 0; brojac < 4; brojac++)
     {
         fetch('https://api.thecatapi.com/v1/images/search')
@@ -143,11 +141,10 @@ function dohvatiMacu(){
         .then(data => {
             sUrl = data[0].url;
             //CSS Klase: image-tilt image-grayscale bounce pulse fade-in-out wobble flip shrink-grow heartbeat glow
-            let sKlase = "";
+            let sKlase = "  fade-in-out pulse heartbeat";
             sImgElement += "<img class='img-responsive img-circle margin "+sKlase+"' src='"+sUrl+"' style='border-radius:15%; width:300px;height:auto; cursor:pointer;'   />";
             oMacaDana.innerHTML = sImgElement;
       });
-    }
-    
+    }    
 }
 dohvatiMacu();
