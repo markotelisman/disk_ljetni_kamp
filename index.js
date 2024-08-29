@@ -168,22 +168,24 @@ function dohvatiMacu(){
 }
 dohvatiMacu();
 
-async function dohvatiVrijeme(){
-    const url = 'https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5&units=imperial&lang=en';
-    const options = {
-        method: 'GET',
-        headers: {
-            'x-rapidapi-key': '0c598a9abamsh11fe10efa38aa22p1ea192jsn12a94d1c68d4',
-            'x-rapidapi-host': 'weatherbit-v1-mashape.p.rapidapi.com'
-        }
-    };
-
-    try {
-        const response = await fetch(url, options);
-        const result = await response.text();
-        console.log(result);
-    } catch (error) {
-        console.error(error);
+/*
+function napraviGalerijuMaca(){
+    let sGalleryImgElement = "";
+    let sUrl = "";
+    let sAltText = "";
+    let oMacaDana = "";
+    oMacaDanaGalerija = document.getElementById("galerija");
+    for (brojac = 0; brojac < 4; brojac++)
+    {
+        fetch('https://api.thecatapi.com/v1/images/search')
+        .then(response => response.json())
+        .then(data => {
+            sUrl = data[0].url;
+            //CSS Klase: image-tilt image-grayscale bounce pulse fade-in-out wobble flip shrink-grow heartbeat glow
+            let sKlase = "";
+            sGalleryImgElement += "<a data-fslightbox='gallery' href='"+sUrl+"'> <img src='"+sUrl+"' class='img-responsive margin "+sKlase+"' style='width: 20%' alt='Image'/></a>";
+            oMacaDanaGalerija.innerHTML = sGalleryImgElement;
+      });
     }
 }
-//dohvatiVrijeme();
+napraviGalerijuMaca();*/
